@@ -10,7 +10,7 @@
         <module name="DirectorioKotlin.app.scrapper" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.7">
+    <bytecodeTargetLevel target="1.8">
       <module name="DirectorioKotlin.app" target="11" />
     </bytecodeTargetLevel>
   </component>

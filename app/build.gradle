@@ -17,9 +17,24 @@ android {
     }
 
     buildTypes {
+        // Modo: Produccion
         release {
-            minifyEnabled false
+            debuggable false
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            crunchPngs true
+            versionNameSuffix ".r"
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        // Modo: Desarrollo
+        debug {
+            debuggable true
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+            crunchPngs false
+            versionNameSuffix ".d"
         }
     }
     compileOptions {
@@ -28,6 +43,14 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            output.versionCodeOverride = project.ext.buildTimestamp
+            output.versionNameOverride = project.ext.buildVersion + (variant.name == "debug" ? ".d" : ".r")
+        }
+
     }
 }
 
