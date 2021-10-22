@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DirectorioKotlin</string>
+    <string name="acra_dialog_title">Crash!!</string>
+    <string name="acra_dialog_comment">Sorry, the application crashed.\nPlease send a report to the developers.\nYou can add a comment here.</string>
 </resources>

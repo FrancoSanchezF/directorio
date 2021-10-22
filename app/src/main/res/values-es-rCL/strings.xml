@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DirectorioKotlin</string>
+    <string name="acra_dialog_title">Se cayó</string>
+    <string name="acra_dialog_comment">"Lo siento, la aplicación presenta dificultades.\nPor favor envíe un reporte a los desarrolladores.\nPuedes agregar un comentario aquí: "</string>
+</resources>
