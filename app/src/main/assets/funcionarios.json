@@ -1,0 +1,102 @@
+[
+  {
+    "id": 25773,
+    "nombre": "Diego Patricio Urrutia Astorga",
+    "cargo": "Académico",
+    "unidad": "Facultad de Ingeniería y Ciencias Geológicas",
+    "email": "durrutia@ucn.cl",
+    "telefono": "Fono (55) 2355163",
+    "oficina": "Pab. Y-1",
+    "direccion": "Avenida Angamos 0610, Antofagasta - Chile"
+  },
+  {
+    "id": 25773,
+    "nombre": "Diego Patricio Urrutia Astorga",
+    "cargo": "Académico",
+    "unidad": "Facultad de Ingeniería y Ciencias Geológicas",
+    "email": "durrutia@ucn.cl",
+    "telefono": "Fono (55) 2355163",
+    "oficina": "Pab. Y-1",
+    "direccion": "Avenida Angamos 0610, Antofagasta - Chile"
+  },
+  {
+    "id": 25812,
+    "nombre": "Javier Arzúa Touriño",
+    "cargo": "Académico",
+    "unidad": "Facultad de Ingeniería y Ciencias Geológicas",
+    "email": "javier.arzua@ucn.cl",
+    "telefono": "Fono (55) 265 1024",
+    "oficina": "PABELLON O-1 OFICINA 324",
+    "direccion": "Avenida Angamos 0610, Antofagasta - Chile"
+  },
+  {
+    "id": 25822,
+    "nombre": "Elias Neftali Tapia Vega",
+    "cargo": "Jefe de Carrera",
+    "unidad": "Facultad de Ingeniería y Ciencias Geológicas",
+    "email": "elias.tapia@ucn.cl",
+    "telefono": "Fono (55) 265 1018",
+    "oficina": "PABELLÓN O-1 OFICINA 310",
+    "direccion": "Avenida Angamos 0610, Antofagasta - Chile"
+  },
+  {
+    "id": 25875,
+    "nombre": "Marjorie Alejandra Miranda Carvajal",
+    "cargo": "Coordinadora Acad.Carreras",
+    "unidad": "Vicerrectoría Académica",
+    "email": "marjorie.miranda@ucn.cl",
+    "telefono": "",
+    "oficina": "",
+    "direccion": "Avenida Angamos 0610, Antofagasta - Chile"
+  },
+  {
+    "id": 25893,
+    "nombre": "Izabott Tamara Erazo Varas",
+    "cargo": "Técnico de Laboratorio",
+    "unidad": "Facultad de Ingeniería y Ciencias Geológicas",
+    "email": "ierazo@ucn.cl",
+    "telefono": "",
+    "oficina": "",
+    "direccion": "Avenida Angamos 0610, Antofagasta - Chile"
+  },
+  {
+    "id": 25966,
+    "nombre": "Marisela Alejandra Gonzalez Diaz",
+    "cargo": "Jefa de Departamento Gestión Cobranzas",
+    "unidad": "Dirección de Finanzas",
+    "email": "mgonzalez03@ucn.cl",
+    "telefono": "",
+    "oficina": "",
+    "direccion": "Avenida Angamos 0610, Antofagasta - Chile"
+  },
+  {
+    "id": 25979,
+    "nombre": "Tomas Gabriel Bas",
+    "cargo": "Académico",
+    "unidad": "Escuela de Ciencias Empresariales",
+    "email": "tomas.bas@ucn.cl",
+    "telefono": "Fono (51) 2206886",
+    "oficina": "EDIF. D / OF.",
+    "direccion": "Larrondo N° 1281, Coquimbo - Chile"
+  },
+  {
+    "id": 25989,
+    "nombre": "Veronica Giannyna Apablaza Alvarez",
+    "cargo": "Secretaria Ejecutiva",
+    "unidad": "Facultad de Ingeniería y Ciencias Geológicas",
+    "email": "veronica.apablaza@ucn.cl",
+    "telefono": "",
+    "oficina": "",
+    "direccion": "Avenida Angamos 0610, Antofagasta - Chile"
+  },
+  {
+    "id": 25993,
+    "nombre": "Catalina Veas Pizarro",
+    "cargo": "Técnico Atención Párvulo",
+    "unidad": "Dirección General Estudiantil",
+    "email": "catalina.veas@ucn.cl",
+    "telefono": "",
+    "oficina": "",
+    "direccion": "Avenida Angamos 0610, Antofagasta - Chile"
+  }
+]

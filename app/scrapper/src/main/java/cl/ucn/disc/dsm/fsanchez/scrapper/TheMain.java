@@ -21,6 +21,7 @@ import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Type;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -108,12 +109,12 @@ public final class TheMain {
       funcionarios.add(f);
 
       // Save by 25
-      if (funcionarios.size() % 25 == 0) {
+      if (funcionarios.size() % 2 == 0) {
 
         log.debug("Writing {} Funcionarios to file .. ", funcionarios.size());
 
         // Write the List of Funcionarios in JSON format.
-        FileUtils.writeStringToFile(new File("funcionarios.txt"),
+        FileUtils.writeStringToFile(new File("funcionarios.json"),
                 GSON.toJson(funcionarios),
                 StandardCharsets.UTF_8);
       }

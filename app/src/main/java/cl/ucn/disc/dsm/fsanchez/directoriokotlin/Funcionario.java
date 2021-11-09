@@ -7,22 +7,66 @@
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-package cl.ucn.disc.dsm.fsanchez.directoriokotlin
+package cl.ucn.disc.dsm.fsanchez.directoriokotlin;
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import androidx.lifecycle.ViewModelProvider
+import lombok.Builder;
+import lombok.Getter;
 
 /**
+ * The UCN Funcionario.
+ *
  * @author Franco Sanchez-Flores
  */
-class MainActivity : AppCompatActivity() {
+@Builder
+public final class Funcionario {
 
-    /**
-     * @param savedInstanceState the state.
-     */
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
+  /**
+   * The ID.
+   */
+  @Getter
+  private final Integer id;
+
+  /**
+   * The Nombre.
+   */
+  @Getter
+  private final String nombre;
+
+  /**
+   * The Cargo.
+   */
+  @Getter
+  private final String cargo;
+
+  /**
+   * The Unidad.
+   */
+  @Getter
+  private final String unidad;
+
+  /**
+   * The Email.
+   */
+  @Getter
+  private final String email;
+
+  /**
+   * The Telefono.
+   */
+  @Getter
+  private final String telefono;
+
+  /**
+   * The Oficina.
+   */
+  @Getter
+  private final String oficina;
+
+  /**
+   * The Direccion.
+   */
+  @Getter
+  private final String direccion;
+
+
 }
