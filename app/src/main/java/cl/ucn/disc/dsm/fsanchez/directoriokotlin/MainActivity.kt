@@ -9,20 +9,83 @@
 
 package cl.ucn.disc.dsm.fsanchez.directoriokotlin
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.lifecycle.ViewModelProvider
+import androidx.appcompat.app.AppCompatActivity
 
 /**
  * @author Franco Sanchez-Flores
  */
 class MainActivity : AppCompatActivity() {
 
+    protected FuncionarioAdapter funcionarioAdapter;
     /**
      * @param savedInstanceState the state.
      */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Get the List (RecyclerView)
+        final RecyclerView recyclerView = findViewById(R.id.am_rv_funcionarios);
+        // The type of layout of RecyclerView
+        recyclerView.setLayout.Manager(
+            new LinearLayoutManager (this,
+            RecyclerView.VERTICAL,
+            false
+        ));
+
+        // Build the Adapter
+        this.funcionarioAdapter = new FuncionarioAdapter ();
+        // Union of Adapter + RecyclerView
+        recyclerView.setAdapter(this.funcionarioAdapter);
+
+        @Override
+        protected void onStart() {
+            super.onStart();
+            // Run in the background
+            AsyncTask.execute(() -> {
+
+            List<Funcionario> theFuncionarios;
+
+            // Read the funcionarios.json
+            try (final InputStream is =
+                super.getApplication().getAssets().open("funcionarios.json")) {
+
+                // Get the Type oif List<Funcionarios> with reflection
+                final Type funcionariosListType =
+                    new TypeToken < List < Funcionario > > (){}.getType();
+
+                // The reader
+                final Reader reader = new InputStreamReader (is);
+
+                // The json to object converter.
+                final Gson gson = new GsonBuilder ().create();
+
+                // Google Gson Black magic
+                theFuncionarios = gson.fromJson(reader, funcionariosListType);
+
+            } catch (IOException e) {
+                e.printStackTrace();
+                return;
+            }
+
+            // Sort by name
+            theFuncionarios.sort(Comparator(.comparing(Funcionario::GetNombre));
+
+            // Populate the Adapter
+            this.funcionarioAdapter.setFuncionarios(theFuncionarios);
+
+            // Populate the Adapter
+            this.funcionarioAdapter.setFuncionarios(theFuncionarios);
+
+                // Notify / Update de GUI
+            runOnUiThread(() -> {
+                    this.funcionarioAdapater.notifyDataSetChanged());
+                });
+
+
+        });
+
+        }
     }
 }
