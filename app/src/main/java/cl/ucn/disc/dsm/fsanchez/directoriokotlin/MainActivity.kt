@@ -28,18 +28,26 @@ class MainActivity : AppCompatActivity() {
         // Get the List (RecyclerView)
         final RecyclerView recyclerView = findViewById(R.id.am_rv_funcionarios);
         // The type of layout of RecyclerView
-        recyclerView.setLayout.Manager(
-            new LinearLayoutManager (this,
-            RecyclerView.VERTICAL,
-            false
-        ));
+        recyclerView.setLayout.Manager(new LinearLayoutManager (this, RecyclerView.VERTICAL, false));
 
         // Build the Adapter
         this.funcionarioAdapter = new FuncionarioAdapter ();
         // Union of Adapter + RecyclerView
         recyclerView.setAdapter(this.funcionarioAdapter);
 
-        @Override
+        // Build the ViewModel
+        FuncionarioViewModel funcionarioViewModel = viewModelProvider.AndroidViewModelFactory.getInstance(this.getApplication())
+            .create(FuncionarioViewModel.class);
+
+        // Watch the List of Funcionario
+        funcionarioViewModel.getFuncionarios().observe(this, funcionarios -> {
+            // Set the funcionarios (from view model)
+            funcionarioAdapter.setFuncionarios(funcionarios);
+            // Refresh the Recycler (ListView)
+            funcionarioAdapter.notifyDataSetChanged();
+        });
+
+        /*@Override
         protected void onStart() {
             super.onStart();
             // Run in the background
@@ -86,6 +94,6 @@ class MainActivity : AppCompatActivity() {
 
         });
 
-        }
+        }*/
     }
 }
